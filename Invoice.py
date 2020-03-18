@@ -44,3 +44,9 @@ class Invoice:
                 continue
             else:
                 return userInput
+            
+    def totalProducts(self, products):
+        total_products = 0
+        for k, v in products.items():
+            total_products += int(v['qnt'])
+        return total_products
