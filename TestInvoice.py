@@ -31,3 +31,9 @@ def test_CanCalculateTotalPurePrice(invoice, products):
 def test_CanCalculateTotalProducts(invoice, products):
     invoice.totalProducts(invoice, products)
     assert invoice.totalProducts(invoice, products) == 15
+    
+def test_CanCalculateIncreasedImpurePrice(invoice, products, percent):
+   invoice.increasedImpurePrice(products, percent)
+   assert invoice.increasedImpurePrice(products, percent) == 82.5
+
+
